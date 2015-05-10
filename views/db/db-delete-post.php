@@ -7,3 +7,4 @@ include_once 'db.php';
 		
 	remove_post($mysqli, $post_id);
 	echo $post_id;
+?>

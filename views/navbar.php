@@ -14,7 +14,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-		  <a class="navbar-brand navbar-title" href="index.php"><p class="team-title">Team</p><p>Bottcher</p>
+		  <a class="navbar-brand navbar-title" href="index.php"><p class="team-title">PRAIRIE</p>CHASERS<p>STORM</p>
 		  </a>
 		</div>
 		<div class="collapse navbar-collapse" id="main-navbar">

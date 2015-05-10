@@ -14,6 +14,7 @@ sec_session_start();
 <script src="js/admin-manage-posts.js"></script>
 <script src="js/admin-twitter.js"></script>
 <script src="js/admin-sponsor.js"></script>
+<script src="js/admin-images.js"></script>
 <script src="js/spin.min.js"></script>
 <body>
 

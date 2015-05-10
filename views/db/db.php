@@ -87,8 +87,62 @@ function add_sponsor($mysqli, $sponsor_image, $sponsor_link){
 		return $mysqli->insert_id;
 }
 
-function add_image($mysqli, $image){
+function update_sponsor($mysqli, $sponsor_id, $sponsor_image, $sponsor_link){
+	echo $sponsor_link;
+	echo $sponsor_image;
+	echo $sponsor_id;
+	$stmt = $mysqli->prepare("UPDATE sponsors SET image = ?, 
+											  link = ?
+										WHERE id = ?");
+		$stmt->bind_param('ssi', $sponsor_image, $sponsor_link, $sponsor_id);
+		$stmt->execute();
+}
+
+function get_all_sponsors($mysqli){
+	$stmt = $mysqli->prepare("SELECT * FROM sponsors");
+	$stmt->execute();
 	
+	$results = array();
+	$result = $stmt->get_result();
+	while ($row = $result->fetch_array(MYSQLI_NUM))
+        {
+			array_push($results, $row);
+        }
+	return $results;
+}
+
+function delete_sponsor($mysqli, $id){
+	$stmt = $mysqli->prepare("DELETE FROM sponsors WHERE id = ?");
+	$stmt->bind_param('i', $id);
+	$stmt->execute();
+}
+
+
+function add_image($mysqli, $image){
+		$stmt = $mysqli->prepare("INSERT INTO image (image) VALUES (?)");
+		$stmt->bind_param('s', $image);
+		$stmt->execute();
+		return $mysqli->insert_id;
+}
+
+
+function get_all_images($mysqli){
+	$stmt = $mysqli->prepare("SELECT * FROM image");
+	$stmt->execute();
+	
+	$results = array();
+	$result = $stmt->get_result();
+	while ($row = $result->fetch_array(MYSQLI_NUM))
+        {
+			array_push($results, $row);
+        }
+	return $results;
+}
+
+function delete_image($mysqli, $id){
+	$stmt = $mysqli->prepare("DELETE FROM image WHERE id = ?");
+	$stmt->bind_param('i', $id);
+	$stmt->execute();
 }
 
 

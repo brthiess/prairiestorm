@@ -15,7 +15,8 @@
 			echo '
 					<div class="jumbotron-wrapper">
 						<div class="col-sm-12 main-image">
-							<img src="images/front-page/brendan-background.jpg" alt="">
+							<img src="images/front-page/main-image.jpg" alt="">
+							<img class="front-page-logo" src="images/front-page/logo.png" alt="">
 							<div class="title">Team Bottcher</div>
 							<div class="players">Brendan | Tom | Brad | Karrick</div>
 						</div>
@@ -25,9 +26,8 @@
 			echo '
 				<div class="jumbotron-wrapper parallax__group">
 					<div class="col-sm-12 main-image parallax__layer parallax__layer--back">
-						<img src="images/front-page/brendan-background.jpg" alt="">
-						<div class="title">Team Bottcher</div>
-						<div class="players">Brendan | Tom | Brad | Karrick</div>			
+						<img class="jumbotron-image" src="images/front-page/main-image.jpg" alt="">
+						<img class="front-page-logo img-responsive" src="images/front-page/logo.png" alt="Prairie Storm Chasers Logo">			
 					</div>
 				</div>';			
 		}

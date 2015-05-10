@@ -4,7 +4,7 @@ $(document).ready(function() {
 	load_page("admin-add-post");
 
 	$(".admin-option").click(function(event){
-		load_page($(this).attr("id"), "");
+		load_page($(this).attr("id"));
 	});
 });
 
@@ -36,6 +36,7 @@ function display_confirmation(location, message, type, post_number){
 		$(".confirmation-modal").css("opacity","1");
 		setTimeout(function() {
 			$(".confirmation-modal").css("opacity","0");
+			$(".confirmation-modal").css("z-index","-99");
 		}, 700);
 	}
 }

@@ -2,6 +2,12 @@
 Navbar Style
 **************************/
 
+@font-face {
+    font-family: daStreet;
+    src: url(../fonts/dastreet.ttf);
+}
+
+
 html, body {
 	height: 100%;
 	cursor: default;
@@ -52,7 +58,7 @@ body {
 }
 
 .navbar-title {
-	font-family: Impact, Charcoal, sans-serif;
+	font-family: daStreet, Impact, Charcoal, sans-serif;
 	font-size: 2.0em;
 	font-style: italic;
 	bottom: 0%;
@@ -62,7 +68,7 @@ body {
 .navbar-title p {
 	display:inline;
 	float:left;
-	color: #f1c40f;
+	color: #FF0000;
 }
 
 .navbar-title .team-title {
@@ -79,13 +85,22 @@ body {
 }
 
 .main-image {
+	position: relative;
 	padding: 0px;
-	margin-top: 3em;
+	margin-top: 0em;
 	margin-bottom: 0px;
 	max-height: 45em;
 	perspective: 20px;
 	-webkit-perspective:20px;
 }
+
+.front-page-logo {
+	position: absolute;
+	left: 42%;
+	top: 30%;
+	width: 15%;
+}	
+
  .parallax {
     height: 500px; /* fallback for older browsers */
     height: 100vh;
@@ -128,25 +143,9 @@ body {
 
 @media (max-width: 1100px) {
 
-	.main-image .players {
-		top: 25% !important;
-		left: 6% !important;
-		font-size: 1.5em !important;
-	}
-	
-	.main-image .title {
-		font-size: 3.2em !important;
-	}
 }
 
 @media (max-width: 768px) {
-	.main-image .title {
-		opacity: 0;
-	}
-	
-	.main-image .players {
-		opacity: 0;
-	}
 	
   .parallax__layer--base {
     -webkit-transform: none;
@@ -185,27 +184,27 @@ body {
     bottom: 0;
   }
   
-  .main-image img {
+
+  
+  .main-image .front-page-logo {
 	position: absolute;
-	right: 0px;
-	top: 0px;
+	top: 40% !important;
+	width: 40%;
+	left: 30%
   }
 
 }
 
 @media (max-width: 400px) {
-	.main-image img {
-		right: -150px;
-	}
 }
 
 
 
-.main-image img {
-	min-height: 100%;
-	min-width: 100%;
-	min-height: 100vh;
-	min-width: 100vw;
+.main-image .jumbotron-image {
+	height: 100%;
+	width: 100%;
+	height: 100vh;
+	width: 100vw;
 }
 
 .main-image {
@@ -215,28 +214,15 @@ body {
 	color: white;
 }
 
-.main-image .title {
-	position: absolute;
-	top: 10%;
-	left: 5%;
-	font-size: 5em;
 
-}
-
-.main-image .players {
-	position: absolute;
-	top: 25%;
-	left: 8%;
-	font-size: 2em;
-}
 
 .active-page {
-	background: rgb(245,245,1) !important;
+	background: rgb(255,0,0) !important;
 }
 
 .nav-button:hover {
 	transition: background 0.5s ease;
-	background: rgb(245,245,1);
+	background: rgb(255,0,0);
 }
 
 .nav-button a {
@@ -302,6 +288,7 @@ Team Container
 
 .team-container .player-name {
 	text-align: center;
+	font-family: daStreet, helvetica;
 }
 
 .bio-team-description .position  h3{
@@ -339,7 +326,7 @@ Team Container
 }
 .team-container .last-name {
 	font-size:2.5em;
-	color: #f1c40f;
+	color: #FF0000;
 }
 
 .team-image-container .image-wrapper > img {
@@ -374,7 +361,7 @@ Team Container
 	height: 100%;
 	opacity: 0;
 	transition: opacity 0.5s;
-	background: #27ae60;
+	background: black;
 }
 
 .team-image-container .caption-hover {
@@ -394,6 +381,7 @@ Team Container
 	font-weight: 500;
 	top: 20%;
 	opacity: 1;
+	color: white;
 }
 
 .team-image-container .caption img {
@@ -438,6 +426,27 @@ Sponsors Container
 .sponsor-container {
 	background: #2c3e50;
 }
+
+.sponsor-images-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sponsor-image-icon {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.sponsor-image{
+	height: 200px;
+}
+
+.sponsor-image-icon:hover {
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+
 /*************************************
 News Container
 *************************************/
@@ -484,12 +493,12 @@ News Container
 }
 
 .news-container .news-entry-title {
-	color: #005C00;
+	color: #660000;
 	font-size: 2em;
 }
 
 .news-container .news-entry-date {
-	color: #003300;	
+	color: #660000;	
 	font-style: italic;
 }
 

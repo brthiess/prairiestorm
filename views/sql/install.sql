@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS login_attempts;
 DROP TABLE IF EXISTS post;
 DROP TABLE IF EXISTS twitter_accounts;
 DROP TABLE IF EXISTS sponsors;
+DROP TABLE IF EXISTS image;
 
 CREATE TABLE users(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -45,6 +46,11 @@ INSERT INTO twitter_accounts(username) VALUES("swiftchaser");
 
 CREATE TABLE sponsors (
 	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	image BLOB,
+	image MEDIUMBLOB,
 	link varchar(256)
+);
+
+CREATE TABLE image (
+	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	image LONGBLOB
 );
